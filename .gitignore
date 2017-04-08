@@ -1,0 +1,6 @@
+.vs/EFDemoProject/v14/.suo
+/packages/*.*
+EFDemoProject/bin/*
+EFDemoProject/obj/*
+EFDemoProject.Tests/bin/*
+EFDemoProject.Tests/obj/*
