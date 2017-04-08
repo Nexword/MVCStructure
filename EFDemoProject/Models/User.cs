@@ -14,6 +14,6 @@ namespace EFDemoProject.Models
 
         public UserRoles Role { get; set; }
 
-        public DateTime DateCreated { get; set; }
+        public virtual List<Issue> Issues { get; set; }
     }
 }
