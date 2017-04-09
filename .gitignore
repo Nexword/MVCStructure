@@ -4,3 +4,5 @@ EFDemoProject/bin/*
 EFDemoProject/obj/*
 EFDemoProject.Tests/bin/*
 EFDemoProject.Tests/obj/*
+*.mdf
+*.ldf
