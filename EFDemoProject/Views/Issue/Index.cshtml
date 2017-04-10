@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EFDemoProject.ViewModels.IssueViewModel>
+
+@{
+    Page.Title = "Список задач";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Список задач</h2>
+
+<p>
+    @Html.ActionLink("Создать задачу", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+	        @Html.DisplayFor(modelItem => item.Price) <span>руб.</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+    </tr>
+}
+
+</table>
