@@ -141,6 +141,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Issue\Index.cshtml" />
+    <Content Include="Views\Issue\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

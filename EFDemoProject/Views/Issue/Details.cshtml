@@ -1,0 +1,40 @@
+﻿@model EFDemoProject.ViewModels.IssueViewModel
+
+@{
+    Page.Title = "Просмотр задачи";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Просмотр задачи</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

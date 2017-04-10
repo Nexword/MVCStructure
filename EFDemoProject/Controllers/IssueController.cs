@@ -26,7 +26,20 @@ namespace EFDemoProject.Controllers
 
 	    public ActionResult Get(int id)
 	    {
-		    return View();
+		    var issue = context.Issues.Find(id);
+		    if (issue == null)
+		    {
+			    return HttpNotFound($"Issue with id = {id} not found");
+		    }
+
+		    var model = new IssueViewModel
+		    {
+			    Title = issue.Title,
+			    Price = issue.Price,
+			    Status = issue.Status.ToString()
+		    };
+
+		    return View("Details", model);
 	    }
 
 	    public ActionResult Create()
