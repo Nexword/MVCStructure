@@ -1,6 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
+using EFDemoProject.Models;
 using EFDemoProject.Models.EF;
+using EFDemoProject.Models.Enums;
 using EFDemoProject.ViewModels;
 
 namespace EFDemoProject.Controllers
@@ -49,8 +52,23 @@ namespace EFDemoProject.Controllers
 
 		[HttpPost]
 	    public ActionResult Create(IssueCreateModel model)
-	    {
-		    return View();
-	    }
+		{
+			var today = DateTime.Today;
+
+			var newIssue = new Issue
+			{
+				Title = model.Title,
+				Description = model.Description,
+				BeginDate = today,
+				EndDate = today.AddDays(5),
+				Price = (decimal) model.Price,
+				Status = IssueStatuses.New
+			};
+
+			context.Issues.Add(newIssue);
+			context.SaveChanges();
+
+			return RedirectToAction("Index");
+		}
     }
 }
