@@ -6,3 +6,4 @@ EFDemoProject.Tests/bin/*
 EFDemoProject.Tests/obj/*
 *.mdf
 *.ldf
+.vs/EFDemoProject/v15/.suo
