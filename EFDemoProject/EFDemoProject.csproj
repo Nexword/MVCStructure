@@ -117,8 +117,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EF\BugTrackerContext.cs" />
-    <Compile Include="Models\EF\BugTrackerDbInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\IssueCreateModel.cs" />
     <Compile Include="ViewModels\IssueViewModel.cs" />
@@ -149,11 +147,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EFDemoProject.Domain.Core\EFDemoProject.Domain.Core.csproj">
       <Project>{F372FC23-80E6-4CD7-8605-66946C8D1599}</Project>
       <Name>EFDemoProject.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFDemoProject.Domain.Interfaces\EFDemoProject.Domain.Interfaces.csproj">
+      <Project>{7bbc2e42-e24c-47a9-8b1f-16b675f6f8e9}</Project>
+      <Name>EFDemoProject.Domain.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFDemoProject.Infrastructure.Data\EFDemoProject.Infrastructure.Data.csproj">
+      <Project>{257ed559-8384-4360-b42b-1faed02561f7}</Project>
+      <Name>EFDemoProject.Infrastructure.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

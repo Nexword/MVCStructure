@@ -4,7 +4,7 @@ using System.Data.Entity;
 using EFDemoProject.Domain.Core.Entities;
 using EFDemoProject.Domain.Core.Enums;
 
-namespace EFDemoProject.Models.EF
+namespace EFDemoProject.Infrastructure.Data.EF
 {
     public class BugTrackerDbInitializer : DropCreateDatabaseIfModelChanges<BugTrackerContext>
     {

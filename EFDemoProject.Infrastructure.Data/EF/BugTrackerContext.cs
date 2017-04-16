@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using EFDemoProject.Domain.Core.Entities;
 
-namespace EFDemoProject.Models.EF
+namespace EFDemoProject.Infrastructure.Data.EF
 {
     public class BugTrackerContext : DbContext
     {

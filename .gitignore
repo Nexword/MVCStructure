@@ -8,6 +8,8 @@ EFDemoProject.Domain.Core/obj/*
 EFDemoProject.Domain.Core/bin/*
 EFDemoProject.Domain.Interfaces/obj/*
 EFDemoProject.Domain.Interfaces/bin/*
+EFDemoProject.Infrastructure.Data/bin/*
+EFDemoProject.Infrastructure.Data/obj/*
 *.mdf
 *.ldf
 .vs/EFDemoProject/v15/.suo
