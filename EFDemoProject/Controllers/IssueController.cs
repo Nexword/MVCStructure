@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Mvc;
-using EFDemoProject.Models;
+using EFDemoProject.Domain.Core.Entities;
+using EFDemoProject.Domain.Core.Enums;
 using EFDemoProject.Models.EF;
-using EFDemoProject.Models.Enums;
 using EFDemoProject.ViewModels;
 
 namespace EFDemoProject.Controllers

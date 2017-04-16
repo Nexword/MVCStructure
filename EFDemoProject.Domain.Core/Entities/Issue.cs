@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Web;
-using EFDemoProject.Models.Enums;
+using EFDemoProject.Domain.Core.Enums;
 
-namespace EFDemoProject.Models
+namespace EFDemoProject.Domain.Core.Entities
 {
     public class Issue
     {

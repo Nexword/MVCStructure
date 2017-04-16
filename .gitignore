@@ -4,6 +4,8 @@ EFDemoProject/bin/*
 EFDemoProject/obj/*
 EFDemoProject.Tests/bin/*
 EFDemoProject.Tests/obj/*
+EFDemoProject.Domain.Core/obj/*
+EFDemoProject.Domain.Core/bin/*
 *.mdf
 *.ldf
 .vs/EFDemoProject/v15/.suo

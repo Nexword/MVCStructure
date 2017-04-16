@@ -1,10 +1,8 @@
-﻿using System;
+﻿using EFDemoProject.Domain.Core.Enums;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using EFDemoProject.Models.Enums;
 
-namespace EFDemoProject.Models
+namespace EFDemoProject.Domain.Core.Entities
 {
     public class User
     {

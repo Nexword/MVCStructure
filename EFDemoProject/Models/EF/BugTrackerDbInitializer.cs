@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using EFDemoProject.Models.Enums;
+using EFDemoProject.Domain.Core.Entities;
+using EFDemoProject.Domain.Core.Enums;
 
 namespace EFDemoProject.Models.EF
 {
