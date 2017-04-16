@@ -3,20 +3,22 @@ using System.Linq;
 using System.Web.Mvc;
 using EFDemoProject.Domain.Core.Entities;
 using EFDemoProject.Domain.Core.Enums;
-using EFDemoProject.Infrastructure.Data.EF;
+using EFDemoProject.Domain.Interfaces;
+using EFDemoProject.Infrastructure.Data;
 using EFDemoProject.ViewModels;
 
 namespace EFDemoProject.Controllers
 {
     public class IssueController : Controller
     {
-		private readonly BugTrackerContext context = new BugTrackerContext();
+		private readonly IIssueRepository repo = new IssueRepository();
 		
         // GET: Issue
         public ActionResult Index()
         {
-	        var issues = context.Issues.AsEnumerable();
-			var model = issues.Select(x => new IssueViewModel
+            var issues = repo.GetIssueList();
+
+            var model = issues.Select(x => new IssueViewModel
 	        {
 				Id = x.Id,
 				Title = x.Title,
@@ -29,7 +31,7 @@ namespace EFDemoProject.Controllers
 
 	    public ActionResult Get(int id)
 	    {
-		    var issue = context.Issues.Find(id);
+		    var issue = repo.GetIssue(id);
 		    if (issue == null)
 		    {
 			    return HttpNotFound($"Issue with id = {id} not found");
@@ -65,8 +67,8 @@ namespace EFDemoProject.Controllers
 				Status = IssueStatuses.New
 			};
 
-			context.Issues.Add(newIssue);
-			context.SaveChanges();
+			repo.Create(newIssue);
+			repo.Save();
 
 			return RedirectToAction("Index");
 		}
