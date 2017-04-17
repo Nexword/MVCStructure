@@ -47,5 +47,15 @@ namespace EFDemoProject.Infrastructure.Data
         {
             db.SaveChanges();
         }
+
+        public IQueryable<Issue> Issues
+        {
+            get { return db.Issues; }
+        }
+
+        public IQueryable<User> Users
+        {
+            get { return db.Users; }
+        }
     }
 }
