@@ -1,11 +1,8 @@
-﻿using System;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
+﻿using System.Linq;
 using EFDemoProject.Domain.Core.Entities;
 using EFDemoProject.Domain.Core.Enums;
 using EFDemoProject.Domain.Interfaces;
 using EFDemoProject.Infrastructure.Business;
-using EFDemoProject.Infrastructure.Data.EF;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -29,6 +26,26 @@ namespace EFDemoProject.Tests
             }.AsQueryable());
 
             return new IssueHelper(mock.Object);
+        }
+
+        [TestMethod]
+        public void Test_Moq_Method()
+        {
+            Mock<IIssueRepository> mock = new Mock<IIssueRepository>();
+            mock.Setup(m => m.GetIssue(It.IsAny<int>())).Returns(new Issue
+            {
+                Price = 22,
+                Id = 1
+            });
+
+            mock.Setup(m => m.GetIssue(It.IsInRange(10, 100, Range.Inclusive))).Returns(new Issue
+            {
+                Price = 22,
+                Id = 1
+            });
+
+            mock.Setup(m => m.GetIssue(It.Is<int>(v => v < 0))).
+                Throws<System.ArgumentOutOfRangeException>();
         }
 
         [TestMethod]
