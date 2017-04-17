@@ -10,6 +10,8 @@ namespace EFDemoProject.Tests
         [TestMethod]
         public void TestMethod1()
         {
+
+
             var issueHelper = new BugTrackerContext();
         }
     }
