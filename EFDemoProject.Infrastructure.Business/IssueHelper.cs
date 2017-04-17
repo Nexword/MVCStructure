@@ -14,7 +14,7 @@ namespace EFDemoProject.Infrastructure.Business
             this.repo = repo;
         }
 
-        public int GetIssueInCurrentStatus(byte status)
+        public int GetIssueCountInCurrentStatus(byte status)
         {
             return repo.Issues.Count(i => (byte)i.Status == status);
         }
